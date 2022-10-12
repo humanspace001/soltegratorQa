@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>slotegratorUI</td>
+            <td>06 Oct 2022, 10:12</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">LoginPageSteps.iAmAtTheLoginPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="2408435630">2.408</td>
+              <td class="duration" data-value="2408435630">2.408</td>
+              <td class="duration" data-value="2408435630">2.408</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.iClickTheSignInButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2839736332">2.839</td>
+              <td class="duration" data-value="2839736332">2.839</td>
+              <td class="duration" data-value="2839736332">2.839</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.iLoggingInAsUserWithPassword(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="225421159">0.225</td>
+              <td class="duration" data-value="225421159">0.225</td>
+              <td class="duration" data-value="225421159">0.225</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.iShouldBeAtTheDashboardHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="130013826">0.130</td>
+              <td class="duration" data-value="130013826">0.130</td>
+              <td class="duration" data-value="130013826">0.130</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.iShouldBeLoggedAsUser(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="34859209">0.034</td>
+              <td class="duration" data-value="34859209">0.034</td>
+              <td class="duration" data-value="34859209">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.startUp()</td>
+              <td>8</td>
+              <td class="duration" data-value="1078424211">1.078</td>
+              <td class="duration" data-value="1078424211">7.377</td>
+              <td class="duration" data-value="8627393694">8.627</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.tearDown(Scenario)</td>
+              <td>8</td>
+              <td class="duration" data-value="82207611">0.082</td>
+              <td class="duration" data-value="82207611">0.148</td>
+              <td class="duration" data-value="657660894">0.657</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.dataInColumnWillBeOrdered(String,String)</td>
+              <td>12</td>
+              <td class="duration" data-value="525625968">0.525</td>
+              <td class="duration" data-value="525625968">0.695</td>
+              <td class="duration" data-value="6307511617">6.307</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.iAmAtThePlayersPage()</td>
+              <td>6</td>
+              <td class="duration" data-value="1939328725">1.939</td>
+              <td class="duration" data-value="1939328725">2.719</td>
+              <td class="duration" data-value="11635972352">11.635</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.iClickOnTheColumn(String)</td>
+              <td>12</td>
+              <td class="duration" data-value="770753756">0.770</td>
+              <td class="duration" data-value="770753756">0.825</td>
+              <td class="duration" data-value="9249045078">9.249</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.iClickOnTheSubTab(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1552238372">1.552</td>
+              <td class="duration" data-value="1552238372">1.552</td>
+              <td class="duration" data-value="1552238372">1.552</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.iClickOnTheTabInMenus(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="125897945">0.125</td>
+              <td class="duration" data-value="125897945">0.125</td>
+              <td class="duration" data-value="125897945">0.125</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.iLoggedInAtDashboardHomePages()</td>
+              <td>7</td>
+              <td class="duration" data-value="7079098596">7.079</td>
+              <td class="duration" data-value="7079098596">7.970</td>
+              <td class="duration" data-value="49553690175">49.553</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.iShouldBeAtThePlayersPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="37691109">0.037</td>
+              <td class="duration" data-value="37691109">0.037</td>
+              <td class="duration" data-value="37691109">0.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.startUp()</td>
+              <td>8</td>
+              <td class="duration" data-value="176371197">0.176</td>
+              <td class="duration" data-value="176371197">0.256</td>
+              <td class="duration" data-value="1410969577">1.410</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.subMenuIsDisplayed(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="31503917">0.031</td>
+              <td class="duration" data-value="31503917">0.031</td>
+              <td class="duration" data-value="31503917">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.tearDown(Scenario)</td>
+              <td>8</td>
+              <td class="duration" data-value="84096066">0.084</td>
+              <td class="duration" data-value="84096066">0.139</td>
+              <td class="duration" data-value="672768532">0.672</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PlayersPageSteps.theTableWithThePlayersLoaded()</td>
+              <td>7</td>
+              <td class="duration" data-value="68781520">0.068</td>
+              <td class="duration" data-value="68781520">0.107</td>
+              <td class="duration" data-value="481470641">0.481</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>18</td>
+            <td>85</td>
+            <td class="duration">1.129</td>
+            <td class="duration">49.553</td>
+            <td class="duration">1:35.982</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
